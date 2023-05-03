@@ -1,0 +1,6 @@
+F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:186:20:GPIO_PortSet	24	static
+F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:198:20:GPIO_PortClear	24	static
+F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_ctimer.h:550:24:CTIMER_GetCaptureValue	16	static
+../source/UH_HCSR-04.c:28:6:ctimer0_callback	16	static
+../source/UH_HCSR-04.c:54:6:StartUH_TRG	8	static
+../source/UH_HCSR-04.c:65:16:UH_measure	24	static

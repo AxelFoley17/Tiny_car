@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?debugstack-directory version="1.0"?>
+<directory xmlns:xi="http://www.w3.org/2001/XInclude">
+   <xi:include href="file:/F:/MCU_WorkSpaces/tavmero_kodbol_jo_pin/.mcuxpressoide_packages_support/LPC845_support/LPC84x_dir_part.xml"/>
+</directory>

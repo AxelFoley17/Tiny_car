@@ -1,0 +1,3 @@
+F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:198:20:GPIO_PortClear	24	static
+../source/Dist/Measure.c:8:6:Measure	40	static
+../source/Dist/Measure.c:26:6:FirstMeasure	8	static
