@@ -1,6 +1,6 @@
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:186:20:GPIO_PortSet	24	static
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:198:20:GPIO_PortClear	24	static
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_ctimer.h:550:24:CTIMER_GetCaptureValue	16	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:186:20:GPIO_PortSet	24	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_gpio.h:198:20:GPIO_PortClear	24	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_ctimer.h:550:24:CTIMER_GetCaptureValue	16	static
 ../source/Dist/UH_HCSR-04.c:29:6:ctimer0_callback	16	static
 ../source/Dist/UH_HCSR-04.c:54:6:ctimer1_callback	16	static
 ../source/Dist/UH_HCSR-04.c:61:6:ctimer2_callback	16	static

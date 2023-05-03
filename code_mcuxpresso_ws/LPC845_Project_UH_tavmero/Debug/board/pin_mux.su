@@ -1,6 +1,6 @@
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:558:20:CLOCK_EnableClock	16	static
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:569:20:CLOCK_DisableClock	16	static
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_iocon.h:102:22:IOCON_PinMuxSet	24	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:558:20:CLOCK_EnableClock	16	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:569:20:CLOCK_DisableClock	16	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_iocon.h:102:22:IOCON_PinMuxSet	24	static
 ../board/pin_mux.c:39:6:BOARD_InitBootPins	8	static
 ../board/pin_mux.c:68:6:BOARD_InitPins	16	static
 ../board/pin_mux.c:104:6:BOARD_InitLEDsPins	32	static

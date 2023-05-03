@@ -1,2 +1,2 @@
-F:\MCU_WorkSpaces\tavmero_kodbol_jo_pin\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:580:20:CLOCK_Select	16	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\LPC845_Project_UH_tavmero\drivers/fsl_clock.h:580:20:CLOCK_Select	16	static
 ../board/board.c:25:10:BOARD_InitDebugConsole	16	static
