@@ -14,7 +14,8 @@ board/peripherals.o board/peripherals.d: ../board/peripherals.c \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_common.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_reset.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h \
- F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h
+ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h \
+ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h
 ../board/peripherals.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_common.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/fsl_device_registers.h:
@@ -31,3 +32,4 @@ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_comm
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_reset.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h:
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h:

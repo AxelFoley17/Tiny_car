@@ -69,6 +69,9 @@ void Init(){
 /*
  * @brief   Application entry point.
  */
+extern volatile uint32_t pwmCounter;
+
+uint16_t ui16_lastValidDistance = 0;
 
 int main(void) {
 	uint16_t ui16_distance;
@@ -81,11 +84,33 @@ int main(void) {
 	LED_RED_OFF();
 	FirstMeasure();
 
+	volatile static int i = 1 ;
+
 	/* Enter an infinite loop, just incrementing a counter. */
 	while(1){
+	//PWM
+		if(pwmCounter == 0U){
+			pwmCounter = PWM_CHANGE_TIME;
+			//cnt = SCTIMER_GetCOUNTValue(SCT0, kSCTIMER_Counter_U);
+			//sprintf(str,"%d %d",cnt, i); //stringgé konvertálás
+			//PRINTF(str);   //kiíratás az USBUART-on
+			//PRINTF("\r\n");
+			if(ui16_lastValidDistance < 100u){
+				SCTIMER_UpdatePwmDutycycle(SCT0, 0U, 0u, SCT0_pwmEvent[0]);
+				SCTIMER_UpdatePwmDutycycle(SCT0, 3U, 0u, SCT0_pwmEvent[3]);
+			}
+			else{
+				SCTIMER_UpdatePwmDutycycle(SCT0, 0U, 30u, SCT0_pwmEvent[0]);
+				SCTIMER_UpdatePwmDutycycle(SCT0, 3U, 30u, SCT0_pwmEvent[3]);
+			}
+
+		}
+
+	//Distance
 		Measure(&ui16_distance, &b_valid, &b_canWrite);
 		if(b_canWrite){
 			if(b_valid){
+				ui16_lastValidDistance = ui16_distance;
 				PRINTF("%u cm\r\n", ui16_distance);   //kiíratás az USBUART-on
 				LED_RED_TOGGLE() ; 		// LED villogtatás
 			}else{

@@ -45,12 +45,22 @@
                   <enableClock>true</enableClock>
                </options>
                <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="SCT0" description="Peripheral SCT0 is not initialized" problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
                   </dependency>
                   <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_gpio" description="Pins initialization requires the LPC_GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.swm" description="Pins initialization requires the SWM Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
                      <feature name="enabled" evaluation="equal" configuration="core0">
                         <data>true</data>
                      </feature>
@@ -63,6 +73,10 @@
                         <pin_feature name="direction" value="OUTPUT"/>
                      </pin_features>
                   </pin>
+                  <pin peripheral="SCT0" signal="OUT, 0" pin_num="47" pin_signal="PIO0_18/ADC_8"/>
+                  <pin peripheral="SCT0" signal="OUT, 1" pin_num="46" pin_signal="PIO0_19/ADC_7"/>
+                  <pin peripheral="SCT0" signal="OUT, 3" pin_num="45" pin_signal="PIO0_20/ADC_6"/>
+                  <pin peripheral="SCT0" signal="OUT, 4" pin_num="44" pin_signal="PIO0_21/ADC_5"/>
                </pins>
             </function>
             <function name="BOARD_InitLEDsPins">
@@ -584,6 +598,16 @@
                   <data type="Version">2.2.2</data>
                </feature>
             </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.sctimer" description="SCT Driver not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="platform.drivers.sctimer" description="Unsupported version of the SCT Driver in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="greaterOrEqual">
+                  <data type="Version">2.4.0</data>
+               </feature>
+            </dependency>
          </dependencies>
          <generated_project_files>
             <file path="board/peripherals.c" update_enabled="true"/>
@@ -613,6 +637,31 @@
                      </feature>
                   </dependency>
                   <dependency resourceType="PeripheralUnifiedSignal" resourceId="CTIMER0.ctimer_capture.2" description="Capture input of the capture 2 channel of peripheral CTIMER0 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="System_clock" description="System clock is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SCT0.out.0" description="Signal output 0 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SCT0.out.1" description="Signal output 1 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SCT0.out.2" description="Signal output 2 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="SCT0.out.3" description="Signal output 3 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
                      <feature name="routed" evaluation="equal">
                         <data type="Boolean">true</data>
                      </feature>
@@ -665,6 +714,75 @@
                            <setting name="capture2Callback" value="ctimer2_callback"/>
                            <setting name="capture3Callback" value=""/>
                         </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="SCT0" uuid="71b72f83-8c18-4838-970f-cf7256827944" type="sctimer" type_id="sctimer_7973000102117ff9c4fa4742aaf3ccb0" mode="basic" peripheral="SCT0" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="main">
+                        <struct name="config">
+                           <setting name="clockMode" value="kSCTIMER_System_ClockMode"/>
+                           <setting name="clockSource" value="SynchronousFunctionClock"/>
+                           <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                           <setting name="SCTInputClockSourceFreq" value="custom:0"/>
+                           <setting name="clockSelect" value="kSCTIMER_Clock_On_Rise_Input_0"/>
+                           <setting name="enableCounterUnify" value="true"/>
+                           <setting name="enableBidirection_l" value="false"/>
+                           <setting name="enableBidirection_h" value="false"/>
+                           <setting name="prescale_l" value="1"/>
+                           <setting name="prescale_h" value="1"/>
+                           <set name="outInitState">
+                              <selected/>
+                           </set>
+                           <set name="inputsync">
+                              <selected/>
+                           </set>
+                        </struct>
+                        <setting name="enableIRQ" value="false"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="SCT0_IRQn"/>
+                           <setting name="enable_interrrupt" value="enabled"/>
+                           <setting name="enable_priority" value="false"/>
+                           <setting name="priority" value="0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <setting name="enableLTimer" value="true"/>
+                        <setting name="enableHTimer" value="false"/>
+                        <array name="pwms">
+                           <struct name="0">
+                              <setting name="output" value="kSCTIMER_Out_0"/>
+                              <setting name="level" value="kSCTIMER_HighTrue"/>
+                              <setting name="dutyCyclePercent" value="0"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="output" value="kSCTIMER_Out_1"/>
+                              <setting name="level" value="kSCTIMER_HighTrue"/>
+                              <setting name="dutyCyclePercent" value="0"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="output" value="kSCTIMER_Out_2"/>
+                              <setting name="level" value="kSCTIMER_HighTrue"/>
+                              <setting name="dutyCyclePercent" value="0"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="output" value="kSCTIMER_Out_3"/>
+                              <setting name="level" value="kSCTIMER_HighTrue"/>
+                              <setting name="dutyCyclePercent" value="0"/>
+                           </struct>
+                        </array>
+                        <setting name="pwmMode" value="kSCTIMER_EdgeAlignedPwm"/>
+                        <setting name="pwmFrequency" value="100"/>
+                        <array name="events"/>
+                        <array name="states">
+                           <struct name="0">
+                              <set name="pwms">
+                                 <selected>
+                                    <id>pwm0</id>
+                                    <id>pwm1</id>
+                                    <id>pwm2</id>
+                                    <id>pwm3</id>
+                                 </selected>
+                              </set>
+                           </struct>
+                        </array>
                      </config_set>
                   </instance>
                </instances>

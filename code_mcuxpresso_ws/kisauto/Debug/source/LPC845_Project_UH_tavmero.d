@@ -19,6 +19,7 @@ source/LPC845_Project_UH_tavmero.o source/LPC845_Project_UH_tavmero.d: \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/peripherals.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h \
+ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/pin_mux.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h \
@@ -44,6 +45,7 @@ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_gpio
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/peripherals.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h:
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/pin_mux.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h:

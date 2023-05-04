@@ -1,4 +1,6 @@
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h:503:20:SCTIMER_StartTimer	16	static
 ../board/peripherals.c:118:13:CTIMER0_init	8	static
-../board/peripherals.c:135:6:BOARD_InitPeripherals	8	static
-../board/peripherals.c:144:6:BOARD_InitBootPeripherals	8	static
+../board/peripherals.c:229:13:SCT0_init	16	static
+../board/peripherals.c:242:6:BOARD_InitPeripherals	8	static
+../board/peripherals.c:252:6:BOARD_InitBootPeripherals	8	static
