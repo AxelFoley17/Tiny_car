@@ -102,8 +102,8 @@ instance:
       - match2Callback: ''
       - match3Callback: ''
       - capture0Callback: 'ctimer0_callback'
-      - capture1Callback: 'ctimer1_callback'
-      - capture2Callback: 'ctimer2_callback'
+      - capture1Callback: 'rightWheel_cb'
+      - capture2Callback: 'leftWheel_cb'
       - capture3Callback: ''
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -113,7 +113,7 @@ const ctimer_config_t CTIMER0_config = {
   .prescale = 29
 };
 /* Multiple callback functions definition */
-ctimer_callback_t CTIMER0_callback[] = {NULL, NULL, NULL, NULL, ctimer0_callback, ctimer1_callback, ctimer2_callback, NULL};
+ctimer_callback_t CTIMER0_callback[] = {NULL, NULL, NULL, NULL, ctimer0_callback, rightWheel_cb, leftWheel_cb, NULL};
 
 static void CTIMER0_init(void) {
   /* CTIMER0 peripheral initialization */

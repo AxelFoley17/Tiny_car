@@ -70,6 +70,16 @@ void Init(){
  * @brief   Application entry point.
  */
 extern volatile uint32_t pwmCounter;
+extern volatile uint32_t u32_RWSpeed;
+extern volatile uint32_t u32_LWSpeed;
+
+uint8_t fastSpeedPercentRight = 70u;
+uint8_t fastSpeedPercentLeft = 70u;
+
+uint8_t speedPercentRight = 35u;
+uint8_t speedPercentLeft = 35u;
+const uint8_t maxSpeedPercent = 40u;
+const uint8_t minSpeedPercent = 30u;
 
 uint16_t ui16_lastValidDistance = 0;
 
@@ -84,7 +94,9 @@ int main(void) {
 	LED_RED_OFF();
 	FirstMeasure();
 
-	volatile static int i = 1 ;
+	uint8_t b_canSwitch = FALSE;
+	uint32_t whichLeft = 1u;
+	uint32_t whichRight = 2u;
 
 	/* Enter an infinite loop, just incrementing a counter. */
 	while(1){
@@ -95,13 +107,50 @@ int main(void) {
 			//sprintf(str,"%d %d",cnt, i); //stringgé konvertálás
 			//PRINTF(str);   //kiíratás az USBUART-on
 			//PRINTF("\r\n");
-			if(ui16_lastValidDistance < 100u){
-				SCTIMER_UpdatePwmDutycycle(SCT0, 0U, 0u, SCT0_pwmEvent[0]);
-				SCTIMER_UpdatePwmDutycycle(SCT0, 3U, 0u, SCT0_pwmEvent[3]);
-			}
-			else{
-				SCTIMER_UpdatePwmDutycycle(SCT0, 0U, 30u, SCT0_pwmEvent[0]);
-				SCTIMER_UpdatePwmDutycycle(SCT0, 3U, 30u, SCT0_pwmEvent[3]);
+			if(ui16_lastValidDistance > 30u){
+				//SCTIMER_UpdatePwmDutycycle(SCT0, 0U, 0u, SCT0_pwmEvent[0]);
+				/*
+				if(b_canSwitch){
+					b_canSwitch = FALSE;
+					whichOne++;
+					if (whichOne > 3u)
+					{
+						whichOne = 0u;
+					}
+				}*/
+
+				if(u32_RWSpeed > u32_LWSpeed + 2){
+					PRINTF("Right is faster\r\n");
+					speedPercentLeft++;
+					speedPercentRight--;
+				}
+				if(u32_LWSpeed > u32_RWSpeed + 2){
+					PRINTF("Left is faster\r\n");
+					speedPercentLeft--;
+					speedPercentRight++;
+				}
+				if(speedPercentLeft > maxSpeedPercent){
+					speedPercentLeft = maxSpeedPercent;
+				}else if(speedPercentLeft < minSpeedPercent){
+					speedPercentLeft = minSpeedPercent;
+				}
+				if(speedPercentRight > maxSpeedPercent){
+					speedPercentRight = maxSpeedPercent;
+				}else if(speedPercentRight < minSpeedPercent){
+					speedPercentRight = minSpeedPercent;
+				}
+
+
+				SCTIMER_UpdatePwmDutycycle(SCT0, whichLeft, speedPercentLeft, SCT0_pwmEvent[whichLeft]);
+				SCTIMER_UpdatePwmDutycycle(SCT0, whichRight, speedPercentRight, SCT0_pwmEvent[whichRight]);
+			}else
+			if(ui16_lastValidDistance < 30u){
+				SCTIMER_UpdatePwmDutycycle(SCT0, whichLeft, 0u, SCT0_pwmEvent[whichLeft]);
+				SCTIMER_UpdatePwmDutycycle(SCT0, whichRight, 0u, SCT0_pwmEvent[whichRight]);
+				/*
+				if(!b_canSwitch){
+					b_canSwitch = TRUE;
+				}*/
 			}
 
 		}
@@ -112,8 +161,9 @@ int main(void) {
 			if(b_valid){
 				ui16_lastValidDistance = ui16_distance;
 				PRINTF("%u cm\r\n", ui16_distance);   //kiíratás az USBUART-on
-				LED_RED_TOGGLE() ; 		// LED villogtatás
+				//LED_RED_TOGGLE() ; 		// LED villogtatás
 			}else{
+				ui16_lastValidDistance = 150u;
 				PRINTF("No echo!\r\n");
 			}
 		}

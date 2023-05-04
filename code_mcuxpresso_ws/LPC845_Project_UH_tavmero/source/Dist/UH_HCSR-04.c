@@ -52,18 +52,11 @@ uint8_t bumm1 = FALSE;
 uint8_t bumm2 = FALSE;
 
 void ctimer1_callback(uint32_t flags){
-	if(bumm1)
-		PRINTF("bumm1 1\r\n");
-	else
-		PRINTF("bumm1 2\r\n");
-	bumm1 = !bumm1;
+	uint32_t u32_value = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
+	PRINTF("Capt1 callback %d\r\n", u32_value);
 }
 void ctimer2_callback(uint32_t flags){
-	if(bumm2)
-		PRINTF("bumm2 1\r\n");
-	else
-		PRINTF("bumm2 2\r\n");
-	bumm2 = !bumm2;
+
 }
 
 

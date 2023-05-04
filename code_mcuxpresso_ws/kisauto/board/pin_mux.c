@@ -56,8 +56,8 @@ BOARD_InitPins:
   - {pin_num: '48', peripheral: GPIO, signal: 'PIO0, 17', pin_signal: PIO0_17/ADC_9/DACOUT_0, identifier: PIO0_17, direction: OUTPUT}
   - {pin_num: '47', peripheral: SCT0, signal: 'OUT, 0', pin_signal: PIO0_18/ADC_8}
   - {pin_num: '46', peripheral: SCT0, signal: 'OUT, 1', pin_signal: PIO0_19/ADC_7}
-  - {pin_num: '45', peripheral: SCT0, signal: 'OUT, 3', pin_signal: PIO0_20/ADC_6}
-  - {pin_num: '44', peripheral: SCT0, signal: 'OUT, 4', pin_signal: PIO0_21/ADC_5}
+  - {pin_num: '45', peripheral: SCT0, signal: 'OUT, 2', pin_signal: PIO0_20/ADC_6}
+  - {pin_num: '44', peripheral: SCT0, signal: 'OUT, 3', pin_signal: PIO0_21/ADC_5}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -89,11 +89,11 @@ void BOARD_InitPins(void)
     /* SCT_OUT1 connect to P0_19 */
     SWM_SetMovablePinSelect(SWM0, kSWM_SCT_OUT1, kSWM_PortPin_P0_19);
 
-    /* SCT_OUT3 connect to P0_20 */
-    SWM_SetMovablePinSelect(SWM0, kSWM_SCT_OUT3, kSWM_PortPin_P0_20);
+    /* SCT_OUT2 connect to P0_20 */
+    SWM_SetMovablePinSelect(SWM0, kSWM_SCT_OUT2, kSWM_PortPin_P0_20);
 
-    /* SCT_OUT4 connect to P0_21 */
-    SWM_SetMovablePinSelect(SWM0, kSWM_SCT_OUT4, kSWM_PortPin_P0_21);
+    /* SCT_OUT3 connect to P0_21 */
+    SWM_SetMovablePinSelect(SWM0, kSWM_SCT_OUT3, kSWM_PortPin_P0_21);
 
     /* Disable clock for switch matrix. */
     CLOCK_DisableClock(kCLOCK_Swm);

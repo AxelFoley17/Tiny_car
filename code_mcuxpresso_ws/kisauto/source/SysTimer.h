@@ -14,7 +14,7 @@
 #define timeout3
 #define timeout4
 
-#define PWM_CHANGE_TIME 200 //msec
+#define PWM_CHANGE_TIME 100 //msec
 
 
 //user definition of SysTimer cycle time [ms]

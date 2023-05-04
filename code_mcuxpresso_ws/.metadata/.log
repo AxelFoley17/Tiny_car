@@ -3858,3 +3858,926 @@ java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
 
 !ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 02:11:01.051
 !MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:41:26.176
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:41:27.239
+!MESSAGE RedlinkServer telnet session connected on port 3025->64303 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:41:37.696
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64304, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:41:40.419
+!MESSAGE Telnet session connected on port 3330->64316 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:42:42.548
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:42:43.554
+!MESSAGE RedlinkServer telnet session connected on port 3025->64328 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:42:44.350
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64329, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:42:46.993
+!MESSAGE Telnet session connected on port 3330->64343 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:44:14.592
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:44:15.598
+!MESSAGE RedlinkServer telnet session connected on port 3025->64353 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:44:16.394
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64354, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:44:18.879
+!MESSAGE Telnet session connected on port 3330->64366 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:44:55.773
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:44:56.778
+!MESSAGE RedlinkServer telnet session connected on port 3025->64376 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:44:57.570
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64377, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:45:00.083
+!MESSAGE Telnet session connected on port 3330->64389 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:45:19.752
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:45:20.757
+!MESSAGE RedlinkServer telnet session connected on port 3025->64394 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:45:21.583
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64395, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:45:24.230
+!MESSAGE Telnet session connected on port 3330->64408 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:47:06.185
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:47:07.191
+!MESSAGE RedlinkServer telnet session connected on port 3025->64422 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:47:07.986
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64423, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:47:10.656
+!MESSAGE Telnet session connected on port 3330->64436 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:49:03.882
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:49:04.887
+!MESSAGE RedlinkServer telnet session connected on port 3025->64486 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:49:05.697
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64487, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:49:08.378
+!MESSAGE Telnet session connected on port 3330->64500 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:49:42.761
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:49:43.768
+!MESSAGE RedlinkServer telnet session connected on port 3025->64503 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:49:55.300
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64504, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:49:57.940
+!MESSAGE Telnet session connected on port 3330->64520 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:52:36.469
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:52:37.474
+!MESSAGE RedlinkServer telnet session connected on port 3025->64592 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:52:38.277
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64593, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:52:40.959
+!MESSAGE Telnet session connected on port 3330->64606 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:54:09.837
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:54:10.844
+!MESSAGE RedlinkServer telnet session connected on port 3025->64630 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:54:11.638
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64631, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:54:14.275
+!MESSAGE Telnet session connected on port 3330->64644 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:55:17.561
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:55:18.568
+!MESSAGE RedlinkServer telnet session connected on port 3025->64655 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:55:19.470
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64656, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:55:22.135
+!MESSAGE Telnet session connected on port 3330->64669 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:56:37.321
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:56:38.327
+!MESSAGE RedlinkServer telnet session connected on port 3025->64676 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:56:39.443
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64677, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:56:42.139
+!MESSAGE Telnet session connected on port 3330->64690 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:57:35.656
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:57:36.665
+!MESSAGE RedlinkServer telnet session connected on port 3025->64697 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:57:37.458
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64698, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:57:40.104
+!MESSAGE Telnet session connected on port 3330->64711 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:58:11.164
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:58:12.171
+!MESSAGE RedlinkServer telnet session connected on port 3025->64714 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:58:12.974
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64715, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:58:15.638
+!MESSAGE Telnet session connected on port 3330->64728 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:59:02.479
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 15:59:03.486
+!MESSAGE RedlinkServer telnet session connected on port 3025->64736 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 15:59:04.297
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64737, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 15:59:06.954
+!MESSAGE Telnet session connected on port 3330->64751 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:02:17.318
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:02:18.324
+!MESSAGE RedlinkServer telnet session connected on port 3025->64777 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:02:19.160
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64778, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:02:21.819
+!MESSAGE Telnet session connected on port 3330->64791 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:04:08.697
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:04:09.703
+!MESSAGE RedlinkServer telnet session connected on port 3025->64828 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:04:10.498
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64829, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:04:13.161
+!MESSAGE Telnet session connected on port 3330->64843 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 16:06:23.509
+!MESSAGE Failed to execute MI command:
+-data-list-register-values x 91
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:06:33.266
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:06:34.272
+!MESSAGE RedlinkServer telnet session connected on port 3025->64869 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:06:35.073
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64871, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:06:37.744
+!MESSAGE Telnet session connected on port 3330->64884 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 16:07:41.310
+!MESSAGE Failed to execute MI command:
+-data-list-register-values x 14
+Error message from debugger back end:
+Invalid thread id: 1
+!STACK 0
+java.lang.Exception: Invalid thread id: 1
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:07:52.935
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:07:53.942
+!MESSAGE RedlinkServer telnet session connected on port 3025->64902 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:07:54.746
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=64903, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:07:57.451
+!MESSAGE Telnet session connected on port 3330->64916 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:20:32.427
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:20:33.432
+!MESSAGE RedlinkServer telnet session connected on port 3025->65170 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:20:34.239
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65171, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:20:36.755
+!MESSAGE Telnet session connected on port 3330->65183 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-05-04 16:22:26.576
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2023-05-04 16:22:26.586
+!MESSAGE There is already a running debug session for the launch configuration 'kisauto LinkServer Debug'.
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:22:39.871
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:22:40.877
+!MESSAGE RedlinkServer telnet session connected on port 3025->65218 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:22:41.720
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65219, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:22:44.237
+!MESSAGE Telnet session connected on port 3330->65231 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:24:52.239
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:24:53.246
+!MESSAGE RedlinkServer telnet session connected on port 3025->65269 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:24:54.051
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65270, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:24:56.727
+!MESSAGE Telnet session connected on port 3330->65283 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:26:43.642
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:26:44.672
+!MESSAGE RedlinkServer telnet session connected on port 3025->65308 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:26:45.483
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65309, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:26:48.007
+!MESSAGE Telnet session connected on port 3330->65321 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:28:44.544
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:28:45.550
+!MESSAGE RedlinkServer telnet session connected on port 3025->65348 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:28:46.379
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65349, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:28:49.059
+!MESSAGE Telnet session connected on port 3330->65362 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:31:16.573
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:31:17.580
+!MESSAGE RedlinkServer telnet session connected on port 3025->65425 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:31:18.382
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=65426, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:31:21.007
+!MESSAGE Telnet session connected on port 3330->65439 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:35:45.069
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:35:46.086
+!MESSAGE RedlinkServer telnet session connected on port 3025->49189 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:35:46.897
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49191, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:35:49.379
+!MESSAGE Telnet session connected on port 3330->49204 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:41:38.632
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:41:39.638
+!MESSAGE RedlinkServer telnet session connected on port 3025->49341 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:41:40.451
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49342, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:41:43.098
+!MESSAGE Telnet session connected on port 3330->49355 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:44:15.813
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:44:16.818
+!MESSAGE RedlinkServer telnet session connected on port 3025->49400 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:44:17.621
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49401, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:44:20.306
+!MESSAGE Telnet session connected on port 3330->49414 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:45:25.387
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:45:26.393
+!MESSAGE RedlinkServer telnet session connected on port 3025->49437 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:45:27.208
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49438, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:45:29.732
+!MESSAGE Telnet session connected on port 3330->49451 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:56:32.767
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:56:33.773
+!MESSAGE RedlinkServer telnet session connected on port 3025->49741 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:56:34.575
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49742, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:56:37.078
+!MESSAGE Telnet session connected on port 3330->49754 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:57:42.284
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:57:43.290
+!MESSAGE RedlinkServer telnet session connected on port 3025->49767 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:57:44.107
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49768, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 16:57:46.611
+!MESSAGE Telnet session connected on port 3330->49780 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 16:58:19.668
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 16:58:19.668
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 16:58:19.668
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 16:58:19.668
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 16:59:37.244
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@33f8cfc0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 16:59:37.244
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 16:59:37.892
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@1d530634): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 16:59:37.892
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 16:59:38.327
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 16:59:39.334
+!MESSAGE RedlinkServer telnet session connected on port 3025->49794 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 16:59:39.335
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:00:31.885
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:00:32.890
+!MESSAGE RedlinkServer telnet session connected on port 3025->49808 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:00:43.058
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49812, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:00:45.702
+!MESSAGE Telnet session connected on port 3330->49825 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:08:50.755
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:08:51.761
+!MESSAGE RedlinkServer telnet session connected on port 3025->49941 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:09:00.391
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49942, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:09:02.858
+!MESSAGE Telnet session connected on port 3330->49954 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-05-04 17:10:31.916
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2023-05-04 17:10:31.928
+!MESSAGE There is already a running debug session for the launch configuration 'kisauto LinkServer Debug'.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2023-05-04 17:10:42.844
+!MESSAGE There is already a running debug session for the launch configuration 'kisauto LinkServer Debug'.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:11:20.360
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:11:20.360
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:11:20.360
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:11:20.360
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:11:24.037
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@2e3f7eab): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 17:11:24.037
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:11:24.392
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:11:25.399
+!MESSAGE RedlinkServer telnet session connected on port 3025->49982 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:11:25.400
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:11:39.945
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:11:40.950
+!MESSAGE RedlinkServer telnet session connected on port 3025->49984 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:11:51.517
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=49985, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:11:54.182
+!MESSAGE Telnet session connected on port 3330->49998 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:13:40.999
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:13:42.005
+!MESSAGE RedlinkServer telnet session connected on port 3025->50084 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:13:42.808
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50085, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:13:45.486
+!MESSAGE Telnet session connected on port 3330->50098 @ 127.0.0.1
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2023-05-04 17:14:02.567
+!MESSAGE Error setting DCB (31)
+!STACK 0
+java.io.IOException: Error setting DCB (31)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4043)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3648)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2023-05-04 17:14:16.717
+!MESSAGE Error setting DCB (31)
+!STACK 0
+java.io.IOException: Error setting DCB (31)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4043)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3648)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:14:22.163
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:14:22.163
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:14:22.163
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:14:22.163
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:20:04.804
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@746b61b2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 17:20:04.804
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:20:05.551
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@1f3754a1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 17:20:05.551
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:20:06.025
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:20:07.031
+!MESSAGE RedlinkServer telnet session connected on port 3025->50223 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:20:07.032
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.tm.terminal.connector.cdtserial 4 0 2023-05-04 17:20:20.519
+!MESSAGE Error opening \\.\COM3 (5)
+!STACK 0
+java.io.IOException: Error opening \\.\COM3 (5)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:316)
+	at org.eclipse.tm.terminal.connector.cdtserial.connector.SerialConnector.connect(SerialConnector.java:80)
+	at org.eclipse.tm.internal.terminal.connector.TerminalConnector.connect(TerminalConnector.java:182)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl.connectTerminal(VT100TerminalControl.java:420)
+	at org.eclipse.tm.terminal.view.ui.tabs.TabFolderManager.createTabItem(TabFolderManager.java:330)
+	at org.eclipse.tm.terminal.view.ui.manager.ConsoleManager.openConsole(ConsoleManager.java:489)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.doRun(TerminalService.java:298)
+	at org.eclipse.tm.terminal.view.ui.services.TerminalService$2.lambda$0(TerminalService.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4043)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3648)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:24:30.471
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:24:31.477
+!MESSAGE RedlinkServer telnet session connected on port 3025->50272 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:24:42.719
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50277, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:24:45.418
+!MESSAGE Telnet session connected on port 3330->50290 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:27:01.169
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:27:02.175
+!MESSAGE RedlinkServer telnet session connected on port 3025->50314 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:27:02.975
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50315, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:27:05.639
+!MESSAGE Telnet session connected on port 3330->50328 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:29:33.165
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:29:34.171
+!MESSAGE RedlinkServer telnet session connected on port 3025->50346 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:29:34.972
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50347, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:29:37.616
+!MESSAGE Telnet session connected on port 3330->50360 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:32:02.808
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:32:03.825
+!MESSAGE RedlinkServer telnet session connected on port 3025->50372 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:32:04.625
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50373, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:32:07.141
+!MESSAGE Telnet session connected on port 3330->50385 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:34:42.820
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:34:43.825
+!MESSAGE RedlinkServer telnet session connected on port 3025->50447 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:34:44.628
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=50448, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:34:47.131
+!MESSAGE Telnet session connected on port 3330->50459 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:36:22.176
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:36:22.176
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:36:22.176
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:36:22.176
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:36:24.688
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@3887e7a1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 17:36:24.688
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:36:25.432
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@7f80fcd1): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 17:36:25.432
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:36:25.816
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:36:26.822
+!MESSAGE RedlinkServer telnet session connected on port 3025->50489 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:36:26.823
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:47:51.398
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:47:52.404
+!MESSAGE RedlinkServer telnet session connected on port 3025->52966 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:48:03.181
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=52968, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:48:05.854
+!MESSAGE Telnet session connected on port 3330->52981 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:48:37.475
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:48:37.475
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:48:37.475
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:48:37.475
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:49:49.602
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@40a5814b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 17:49:49.602
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 17:49:50.234
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@751604a0): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 17:49:50.234
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:49:50.683
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:49:51.690
+!MESSAGE RedlinkServer telnet session connected on port 3025->53003 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 17:49:51.692
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:56:42.086
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:56:43.093
+!MESSAGE RedlinkServer telnet session connected on port 3025->53055 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:56:52.559
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53057, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:56:55.233
+!MESSAGE Telnet session connected on port 3330->53074 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:57:09.218
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:57:10.225
+!MESSAGE RedlinkServer telnet session connected on port 3025->53077 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:57:11.019
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53078, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:57:13.723
+!MESSAGE Telnet session connected on port 3330->53092 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:59:16.395
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 17:59:17.413
+!MESSAGE RedlinkServer telnet session connected on port 3025->53112 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2023-05-04 17:59:18.221
+!MESSAGE Starting GDB server [ F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=53113, -g, -mi, -2, -pLPC845, -vendor=NXP, -vc, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/kisauto/Debug, --flash-dir, F:/MCUXpressoIDE_11.7.0_9198/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.7.0.202301121712/binaries/Flash, --flash-dir, F:/1study/6f/Mikro/_project/Tiny_car/code_mcuxpresso_ws/.mcuxpressoide_packages_support/LPC845_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-05-04 17:59:20.915
+!MESSAGE Telnet session connected on port 3330->53127 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 18:00:00.915
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 18:00:00.915
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 18:00:00.915
+!MESSAGE Hardware Transfer Error
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 18:00:00.915
+!MESSAGE Debugging context: kisauto LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 18:00:05.669
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@1390b788): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1; java.lang.Exception: Stopping Thread 1 failed: T06thread:1;' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-05-04 18:00:05.669
+!MESSAGE Failed to execute MI command:
+-exec-interrupt
+Error message from debugger back end:
+Stopping Thread 1 failed: T06thread:1;
+!STACK 0
+java.lang.Exception: Stopping Thread 1 failed: T06thread:1;
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-05-04 18:00:06.396
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@9f04bdf): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2023-05-04 18:00:06.396
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2023-05-04 18:00:06.827
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-05-04 18:00:07.844
+!MESSAGE RedlinkServer telnet session connected on port 3025->53134 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-05-04 18:00:07.846
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []

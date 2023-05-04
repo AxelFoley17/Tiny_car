@@ -63,8 +63,8 @@ extern uint32_t SCT0_pwmEvent[4];
  **********************************************************************************************************************/
 /* Multiple callback functions declaration */
 extern void ctimer0_callback(uint32_t flags);
-extern void ctimer1_callback(uint32_t flags);
-extern void ctimer2_callback(uint32_t flags);
+extern void rightWheel_cb(uint32_t flags);
+extern void leftWheel_cb(uint32_t flags);
 extern ctimer_callback_t CTIMER0_callback[];
 
 /***********************************************************************************************************************

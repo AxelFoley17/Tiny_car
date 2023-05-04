@@ -51,19 +51,31 @@ void ctimer0_callback(uint32_t flags)
 uint8_t bumm1 = FALSE;
 uint8_t bumm2 = FALSE;
 
-void ctimer1_callback(uint32_t flags){
-	if(bumm1)
-		PRINTF("bumm1 1\r\n");
-	else
-		PRINTF("bumm1 2\r\n");
-	bumm1 = !bumm1;
+volatile uint32_t u32_RWSpeed = 0u;
+volatile uint32_t u32_LWSpeed = 0u;
+volatile uint32_t u32_lastR = 0u;
+volatile uint32_t u32_lastL = 0u;
+
+const float wheelPerimeter = 1.065f; //cm, not very exact
+const uint32_t wholes = 20u;
+const uint32_t freq = 30u * 1000000u;
+const uint32_t cmToM = 100u;
+
+//const float combinedNum = (float)freq * wheelPerimeter / (float)wholes / (float)cmToM;
+const float combinedNum = (float)freq * wheelPerimeter / (float)wholes;
+
+
+void rightWheel_cb(uint32_t flags){
+	uint32_t u32_captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
+	uint32_t diff = u32_captValue - u32_lastR;
+	u32_lastR = u32_captValue;
+	u32_RWSpeed = (volatile uint32_t)(combinedNum / (float) diff);
 }
-void ctimer2_callback(uint32_t flags){
-	if(bumm2)
-		PRINTF("bumm2 1\r\n");
-	else
-		PRINTF("bumm2 2\r\n");
-	bumm2 = !bumm2;
+void leftWheel_cb(uint32_t flags){
+	uint32_t u32_captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_2);
+	uint32_t diff = u32_captValue - u32_lastL;
+	u32_lastL = u32_captValue;
+	u32_LWSpeed = (volatile uint32_t)(combinedNum / (float) diff);
 }
 
 

@@ -2697,3 +2697,1247 @@ arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.
    text	   data	    bss	    dec	    hex	filename
   20892	     40	   2516	  23448	   5b98	kisauto.axf
  
+15:39:53 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20800 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20760	     40	   2516	  23316	   5b14	kisauto.axf
+ 
+15:40:26 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20804 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:41:29 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:42:35 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20804 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:44:05 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20804 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:44:48 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20804 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:45:12 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20804 B        64 KB     31.74%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20764	     40	   2516	  23320	   5b18	kisauto.axf
+ 
+15:46:58 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20820 B        64 KB     31.77%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20780	     40	   2516	  23336	   5b28	kisauto.axf
+ 
+15:48:56 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20836 B        64 KB     31.79%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20796	     40	   2516	  23352	   5b38	kisauto.axf
+ 
+15:49:48 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20796	     40	   2516	  23352	   5b38	kisauto.axf
+ 
+15:52:29 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20876 B        64 KB     31.85%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20836	     40	   2516	  23392	   5b60	kisauto.axf
+ 
+15:54:02 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20900 B        64 KB     31.89%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20860	     40	   2516	  23416	   5b78	kisauto.axf
+ 
+15:55:09 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20900 B        64 KB     31.89%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20860	     40	   2516	  23416	   5b78	kisauto.axf
+ 
+15:56:29 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+15:57:26 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+15:58:04 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+15:58:54 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+16:02:09 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+16:04:01 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+Finished building: ../board/pin_mux.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+16:06:26 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2516	  23436	   5b8c	kisauto.axf
+ 
+16:07:43 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+../source/Dist/UH_HCSR-04.c: In function 'ctimer1_callback':
+../source/Dist/UH_HCSR-04.c:55:11: warning: unused variable 'u32_captValue' [-Wunused-variable]
+   55 |  uint32_t u32_captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
+      |           ^~~~~~~~~~~~~
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20884 B        64 KB     31.87%
+            SRAM:        2556 B      16352 B     15.63%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20844	     40	   2516	  23400	   5b68	kisauto.axf
+ 
+16:17:59 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Building file: ../board/peripherals.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/peripherals.d" -MT"board/peripherals.o" -MT"board/peripherals.d" -o "board/peripherals.o" "../board/peripherals.c"
+../source/Dist/UH_HCSR-04.c: In function 'rightWheel_cb':
+../source/Dist/UH_HCSR-04.c:55:25: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   55 | #define WHEELPERIMETER 1,065
+      |                         ^
+../source/Dist/UH_HCSR-04.c:60:27: note: in expansion of macro 'WHEELPERIMETER'
+   60 |  u32_RWSpeed = (uint32_t)(WHEELPERIMETER / (u32_captValue / 1000000 / 30));
+      |                           ^~~~~~~~~~~~~~
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:87:22: warning: unused variable 'i' [-Wunused-variable]
+   87 |  volatile static int i = 1 ;
+      |                      ^
+Finished building: ../board/peripherals.c
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20920 B        64 KB     31.92%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20880	     40	   2520	  23440	   5b90	kisauto.axf
+ 
+16:18:29 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20936 B        64 KB     31.95%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20896	     40	   2520	  23456	   5ba0	kisauto.axf
+ 
+16:18:43 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20936 B        64 KB     31.95%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20896	     40	   2520	  23456	   5ba0	kisauto.axf
+ 
+16:20:18 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20980 B        64 KB     32.01%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20940	     40	   2520	  23500	   5bcc	kisauto.axf
+ 
+16:20:25 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20940	     40	   2520	  23500	   5bcc	kisauto.axf
+ 
+16:22:31 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20980 B        64 KB     32.01%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20940	     40	   2520	  23500	   5bcc	kisauto.axf
+ 
+16:24:41 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20884 B        64 KB     31.87%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20844	     40	   2520	  23404	   5b6c	kisauto.axf
+ 
+16:26:34 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20900 B        64 KB     31.89%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20860	     40	   2520	  23420	   5b7c	kisauto.axf
+ 
+16:28:36 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20928 B        64 KB     31.93%
+            SRAM:        2560 B      16352 B     15.66%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20888	     40	   2520	  23448	   5b98	kisauto.axf
+ 
+16:31:07 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20976 B        64 KB     32.01%
+            SRAM:        2564 B      16352 B     15.68%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20936	     40	   2524	  23500	   5bcc	kisauto.axf
+ 
+16:35:37 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20996 B        64 KB     32.04%
+            SRAM:        2568 B      16352 B     15.70%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20956	     40	   2528	  23524	   5be4	kisauto.axf
+ 
+16:41:15 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20940 B        64 KB     31.95%
+            SRAM:        2568 B      16352 B     15.70%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20900	     40	   2528	  23468	   5bac	kisauto.axf
+ 
+16:41:31 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20900	     40	   2528	  23468	   5bac	kisauto.axf
+ 
+16:44:08 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20932 B        64 KB     31.94%
+            SRAM:        2564 B      16352 B     15.68%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20892	     40	   2524	  23456	   5ba0	kisauto.axf
+ 
+16:45:17 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       20932 B        64 KB     31.94%
+            SRAM:        2564 B      16352 B     15.68%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  20892	     40	   2524	  23456	   5ba0	kisauto.axf
+ 
+16:56:25 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21184 B        64 KB     32.32%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21140	     44	   2532	  23716	   5ca4	kisauto.axf
+ 
+16:57:34 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21184 B        64 KB     32.32%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21140	     44	   2532	  23716	   5ca4	kisauto.axf
+ 
+17:00:34 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21180 B        64 KB     32.32%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21136	     44	   2532	  23712	   5ca0	kisauto.axf
+ 
+17:08:41 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/Measure.c
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/Measure.d" -MT"source/Dist/Measure.o" -MT"source/Dist/Measure.d" -o "source/Dist/Measure.o" "../source/Dist/Measure.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Building file: ../source/SysTimer.c
+Building file: ../source/sys.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SysTimer.d" -MT"source/SysTimer.o" -MT"source/SysTimer.d" -o "source/SysTimer.o" "../source/SysTimer.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/sys.d" -MT"source/sys.o" -MT"source/sys.d" -o "source/sys.o" "../source/sys.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/sys.c
+ 
+Finished building: ../source/Dist/Measure.c
+ 
+Finished building: ../source/Dist/UH_HCSR-04.c
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+ 
+Finished building: ../source/SysTimer.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21252 B        64 KB     32.43%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:08:53 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:11:11 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/Measure.c
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+Building file: ../source/SysTimer.c
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/Measure.d" -MT"source/Dist/Measure.o" -MT"source/Dist/Measure.d" -o "source/Dist/Measure.o" "../source/Dist/Measure.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/SysTimer.d" -MT"source/SysTimer.o" -MT"source/SysTimer.d" -o "source/SysTimer.o" "../source/SysTimer.c"
+Building file: ../source/sys.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/sys.d" -MT"source/sys.o" -MT"source/sys.d" -o "source/sys.o" "../source/sys.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/SysTimer.c
+Finished building: ../source/sys.c
+ 
+ 
+Finished building: ../source/Dist/Measure.c
+ 
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21252 B        64 KB     32.43%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:11:43 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:13:33 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21252 B        64 KB     32.43%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:24:33 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21236 B        64 KB     32.40%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21192	     44	   2532	  23768	   5cd8	kisauto.axf
+ 
+17:26:19 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:88:9: error: unknown type name '\U000000ed'
+   88 |  Init();í
+      |         ^
+../source/LPC845_Project_UH_tavmero.c:90:9: error: expected declaration specifiers or '...' before string constant
+   90 |  PRINTF("\r\n\r\n----------FIRST MEASURE-------------\r\n\r\n");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+make[1]: *** [source/subdir.mk:32: source/LPC845_Project_UH_tavmero.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+make: *** [makefile:42: all] Error 2
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+17:26:39 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21236 B        64 KB     32.40%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21192	     44	   2532	  23768	   5cd8	kisauto.axf
+ 
+17:26:53 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21192	     44	   2532	  23768	   5cd8	kisauto.axf
+ 
+17:29:25 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/Dist/UH_HCSR-04.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/Dist/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/Dist/UH_HCSR-04.d" -MT"source/Dist/UH_HCSR-04.o" -MT"source/Dist/UH_HCSR-04.d" -o "source/Dist/UH_HCSR-04.o" "../source/Dist/UH_HCSR-04.c"
+Finished building: ../source/Dist/UH_HCSR-04.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21252 B        64 KB     32.43%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21208	     44	   2532	  23784	   5ce8	kisauto.axf
+ 
+17:31:55 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21256 B        64 KB     32.43%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21212	     44	   2532	  23788	   5cec	kisauto.axf
+ 
+17:34:35 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21156 B        64 KB     32.28%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21112	     44	   2532	  23688	   5c88	kisauto.axf
+ 
+17:47:55 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:94:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   94 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21160 B        64 KB     32.29%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21116	     44	   2532	  23692	   5c8c	kisauto.axf
+ 
+17:56:44 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:97:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   97 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21340 B        64 KB     32.56%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21296	     44	   2532	  23872	   5d40	kisauto.axf
+ 
+17:57:02 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:97:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   97 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21404 B        64 KB     32.66%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21360	     44	   2532	  23936	   5d80	kisauto.axf
+ 
+17:59:09 **** Incremental Build of configuration Debug for project kisauto ****
+make -r -j12 all 
+Building file: ../source/LPC845_Project_UH_tavmero.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC845M301JBD48 -DCPU_LPC845M301JBD48_cm0plus -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\component\uart" -I"F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities" -O0 -fno-common -g3 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/LPC845_Project_UH_tavmero.d" -MT"source/LPC845_Project_UH_tavmero.o" -MT"source/LPC845_Project_UH_tavmero.d" -o "source/LPC845_Project_UH_tavmero.o" "../source/LPC845_Project_UH_tavmero.c"
+../source/LPC845_Project_UH_tavmero.c: In function 'main':
+../source/LPC845_Project_UH_tavmero.c:97:10: warning: unused variable 'b_canSwitch' [-Wunused-variable]
+   97 |  uint8_t b_canSwitch = FALSE;
+      |          ^~~~~~~~~~~
+Finished building: ../source/LPC845_Project_UH_tavmero.c
+ 
+Building target: kisauto.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="kisauto.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T "kisauto_Debug.ld" -o "kisauto.axf" ./utilities/fsl_assert.o ./utilities/fsl_debug_console.o ./utilities/fsl_str.o  ./startup/startup_lpc845.o  ./source/Dist/Measure.o ./source/Dist/UH_HCSR-04.o  ./source/LPC845_Project_UH_tavmero.o ./source/SysTimer.o ./source/mtb.o ./source/semihost_hardfault.o ./source/sys.o  ./drivers/fsl_clock.o ./drivers/fsl_common.o ./drivers/fsl_common_arm.o ./drivers/fsl_ctimer.o ./drivers/fsl_gpio.o ./drivers/fsl_power.o ./drivers/fsl_reset.o ./drivers/fsl_sctimer.o ./drivers/fsl_swm.o ./drivers/fsl_usart.o  ./device/system_LPC845.o  ./component/uart/fsl_adapter_miniusart.o  ./board/board.o ./board/clock_config.o ./board/peripherals.o ./board/pin_mux.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       21168 B        64 KB     32.30%
+            SRAM:        2576 B      16352 B     15.75%
+        IAP_SRAM:          0 GB         32 B      0.00%
+Finished building target: kisauto.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "kisauto.axf"; # arm-none-eabi-objcopy -v -O binary "kisauto.axf" "kisauto.bin" ; # checksum -p LPC845 -d "kisauto.bin";
+   text	   data	    bss	    dec	    hex	filename
+  21124	     44	   2532	  23700	   5c94	kisauto.axf
+ 

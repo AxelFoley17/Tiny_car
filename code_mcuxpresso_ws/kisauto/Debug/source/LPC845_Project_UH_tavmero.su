@@ -1,7 +1,6 @@
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\CMSIS/core_cm0plus.h:1058:26:SysTick_Config	16	static
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_gpio.h:186:20:GPIO_PortSet	24	static
-F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_gpio.h:210:20:GPIO_PortToggle	24	static
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h:497:20:CTIMER_StartTimer	16	static
 ../source/LPC845_Project_UH_tavmero.c:51:6:Init	8	static
-../source/LPC845_Project_UH_tavmero.c:76:5:main	16	static
+../source/LPC845_Project_UH_tavmero.c:86:5:main	32	static
