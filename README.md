@@ -1,6 +1,7 @@
-# Önvezető kiskocsi
+# <p style="text-align: center;"> Önvezető kiskocsi </p>
 
 ## Főbb alkotórészek
+
 * lpc 845 brk mikrokontroller és board
 * ultrahangos távolságszenzor https://www.hestore.hu/prod_10035534.html
 * kettős h híd https://www.hestore.hu/prod_10037969.html
@@ -28,3 +29,7 @@
 <br><br>
 * vezeték nélküli modullal telenfonról irányítás
 	* https://www.hestore.hu/prod_10035525.html
+<br><br>
+
+## A repo tartalma
+* ez a repo egy MCUXpresso IDE workspace-t tartalmaz aminek az egyetlen projektje a kiskocsi kódja
