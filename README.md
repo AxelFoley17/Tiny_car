@@ -1,4 +1,4 @@
-# <p style="text-align: center;"> Önvezető kiskocsi </p>
+# <p align="center"> Önvezető kiskocsi </p>
 
 ## Főbb alkotórészek
 
