@@ -22,7 +22,7 @@ source/letsdothis.o source/letsdothis.d: ../source/letsdothis.c \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h \
  ../source/Sys.h ../source/SysTimer.h ../source/Dist/UH_HCSR-04.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h \
- ../source/letsdothis.h
+ ../source/letsdothis.h ../source/timeBetween.h
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/board.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_common.h:
@@ -49,3 +49,4 @@ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h:
 ../source/Dist/UH_HCSR-04.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h:
 ../source/letsdothis.h:
+../source/timeBetween.h:

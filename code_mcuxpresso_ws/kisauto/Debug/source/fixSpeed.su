@@ -1,0 +1,2 @@
+../source/fixSpeed.c:13:6:regulateSpeed	8	static
+../source/fixSpeed.c:28:6:setDesiredEdgeDelay	16	static

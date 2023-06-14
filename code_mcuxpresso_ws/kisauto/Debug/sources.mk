@@ -19,8 +19,8 @@ component/uart \
 device \
 drivers \
 source/Dist \
-source \
 source/Speed_Direction \
+source \
 startup \
 utilities \
 

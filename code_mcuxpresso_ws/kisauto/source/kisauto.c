@@ -45,6 +45,8 @@
 #include "Dist/UH_HCSR-04.h"
 #include "Dist/Measure.h"
 #include "letsdothis.h"
+#include "fixSpeed.h"
+#include "timeBetween.h"
 
 /* TODO: insert other include files here. */
 
@@ -73,7 +75,7 @@ void Init(){
  */
 
 extern volatile uint32_t u32_pwmCounter;//csak bizonyos időnként állítjuk a pwm-et
-extern volatile uint32_t g_systickCounter;
+
 #if 0
 extern volatile uint32_t u32_RWSpeed;//jobb kerék sebessége
 extern volatile uint32_t u32_LWSpeed;//bal kerék sebessége
@@ -83,15 +85,22 @@ extern volatile uint32_t rightTimeSinceLast;
 extern volatile uint32_t leftTimeSinceLast;
 
 volatile uint8_t isGoing = FALSE;
+///////////////////////////////////////////
+typedef enum CarState {scanning = 0, going = 1}CarState; //State of the car
+extern volatile uint32_t g_systickCounter;
 
 int main(void) {
-	
-
 	Init();
 
 	PRINTF("\r\n\r\n----------FIRST MEASURE-------------\r\n\r\n");
 	LED_RED_OFF();
-	FirstMeasure();
+	
+	uint8_t goingStartTime = 0;
+	const uint8_t GOINGDUR = 10;
+	CarState carState = scanning;
+	
+	resetDistances();
+	setDesiredEdgeDelay(9000, 9000);
 
 
 #if 0
@@ -174,12 +183,25 @@ int main(void) {
 #endif	
 #if 1
 	while(1){
-		isGoing = FALSE;
-		while(carNewDir() == FALSE){
-			__asm("NOP");//busy wait
+		switch(carState){
+			case scanning:{
+				if(canGo()){
+					carState = going;
+					goingStartTime = g_systickCounter;
+				}
+				break;
+			}
+			case going:{
+				if(between(g_systickCounter, goingStartTime, goingStartTime + GOINGDUR)){
+					regulateSpeed();
+				}
+				else{
+					stop();
+					carState = scanning;
+				}
+				break;
+			}
 		}
-		isGoing = TRUE;
-		go();
 	}
 #endif	
 #if 0

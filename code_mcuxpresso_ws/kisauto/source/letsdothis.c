@@ -6,23 +6,48 @@
 #include "Dist/UH_HCSR-04.h"
 #include "fsl_debug_console.h"
 #include "letsdothis.h"
+#include "timeBetween.h"
 
 const uint16_t MIN_DISTANCE = 40u; //cm
 const uint16_t MAX_DISTANCE = 400u; //cm
 
-
+//defines
 #define DISTANCES_SIZE 30
-int distances[DISTANCES_SIZE];
 
-void resetDistances(){
-	for(uint8_t i = 0; i < DISTANCES_SIZE; i++){
-		distances[i] = -1;
-	}
-}
+
+//types
+typedef enum DistState{
+	good = 0,
+	bad = 1,
+	unknown = 2,
+	beingMeasured = 3
+}DistState;
+
+typedef struct Dist{
+	uint8_t distance;
+	uint8_t measuredTimes;
+	DistState distState;
+}Dist;
+
+
+//variables
+Dist distances[DISTANCES_SIZE];
+
+int16_t weFace = 0;
+
+int16_t desiredDirection = 0;
 
 const int16_t ALPHA = 5;
 
-int16_t weFace = 0;
+
+//functions
+void resetDistances(){
+	for(int16_t i = 0; i < DISTANCES_SIZE; i++){
+		distances[i].distance = 0;
+		distances[i].measuredTimes = 0;
+		distances[i].distState = unknown;
+	}
+}
 
 int16_t inRangeIndex(int16_t index){
 	while(index >= DISTANCES_SIZE){
@@ -87,14 +112,11 @@ void rotateOne(uint8_t direction){//false = left, true = right
 	uint32_t end = start + ROT_DURATION;
 	if(direction) set_wheels(ROTSPEED-1, -ROTSPEED+1);
 	else set_wheels((-ROTSPEED)-2, ROTSPEED+2);
-	
-	while(g_systickCounter < end ||
-		(start > end && // tulfolyt
-		g_systickCounter > start)//de a g_systickCounter meg nem folyt tul
-		){
+
+	while( between(g_systickCounter, start, end)){//this is only a little bit of waiting
 		__asm("NOP");//busy wait
 	}
-	
+
 	stop();
 }
 
@@ -119,122 +141,94 @@ void rotateTo(int16_t index){//itt mar nem kell inrange be lennie, konyebb szamo
 }
 
 void scan(int16_t index){
-	const uint16_t measureTime = 5;
+	const uint16_t measureTimes = 5;
 	index = inRangeIndex(index);
 	rotateTo(index);
-	
-	uint16_t result = 0;
-	for(uint16_t i = 0; i < measureTime; i++){
+
+	if(distances[index].distState != beingMeasured && distances[index].measuredTimes < measureTimes){//currently not measuring, but we need more
 		UH_measure(TRUE);
-		while(!UH_measure(FALSE).ready && !TimeoutDone1()){
-			__asm("NOP");//busy wait
-		}
-		
-		const uint32_t start = g_systickCounter;
-		const uint32_t end = start + 50;
-		while(	g_systickCounter < end ||
-				(start > end &&
-				g_systickCounter > start)
-			){
-			__asm("NOP");//busy wait
-		}
+		distances[index].distState = beingMeasured;
+	}
+	if(distances[index].distState == beingMeasured && UH_measure(FALSE).ready && TimeoutDone1()){//measuring done
 		if(UH_measure(FALSE).valid){
-			result += UH_measure(FALSE).value;
+			distances[index].distance += UH_measure(FALSE).value / measureTimes;//we only need the average
 		}
 		else{
-			result += MAX_DISTANCE;
+			distances[index].distance = MAX_DISTANCE / measureTimes;//we only need the average;
 		}
+		distances[index].measuredTimes++;
+		distances[index].distState = unknown;
 	}
-	distances[index] = (int)(result / measureTime);
 }
 
-uint8_t isFarEnough(int16_t index){
+DistState isFarEnough(int16_t index){
 	index = inRangeIndex(index);
-	if(distances[index] == -1){
+	if(distances[index].distState == bad){//just to be safe
+		return bad;
+	}
+	if(distances[index].distState == good){//just to be safe
+		return good;
+	}
+
+	if(distances[index].measuredTimes < 5){//we havent yet measured this direction fully
 		scan(index);
 	}
-	
-	if(distances[index] > (int)MIN_DISTANCE){//this hurts but we arent using stdbool
-		return TRUE;
+	if(distances[index].measuredTimes == 5){//we are done measuring, lets evaulate
+		if( distances[index].distance > (int) MIN_DISTANCE ){
+			distances[index].distState = good;
+			return good;
+		}
+		distances[index].distState = bad;
+		return bad;
 	}
-	return FALSE;
+	return unknown;//we arent done measuring so its unknown
 }
 
-uint8_t directionIsGood(int16_t index){
+DistState directionIsGood(int16_t index){
 	index = inRangeIndex(index);
-	if(!isFarEnough(index)){
+	for(int16_t i = 1; i <= ALPHA; i++){
+		DistState res = isFarEnough(index - i);
+		if( res == bad ){//this section is bad we cant go in this direction
+			return bad;
+		}else if(res == unknown){//we arent yet done scanning this section
+			return unknown;
+		}else if(res == good){
+			continue;
+		}
+	}
+	for(int16_t i = 1; i <= ALPHA; i++){
+		DistState res = isFarEnough(index + i);
+		if( res == bad ){//this section is bad we cant go in this direction
+			return bad;
+		}else if(res == unknown){//we arent yet done scanning this section
+			return unknown;
+		}else if(res == good){
+			continue;
+		}
+	}
+
+	return good;//all the directions were good -> we are good to go
+}
+
+uint8_t canGo(){
+	if(desiredDirection >= DISTANCES_SIZE){//we have done a full rotation
+		desiredDirection = 0;
+		resetDistances();
+	}
+	DistState res = directionIsGood(desiredDirection);
+	if(res == bad){//we need to go to the next section
+		desiredDirection += ALPHA * 2;
 		return FALSE;
 	}
-	for(int16_t i = 1; i <= ALPHA; i++){
-		if(!isFarEnough(index - i)){
-			return FALSE;
-		}
+	if(res == unknown){//we arent yet done scanning this section
+		return FALSE;
 	}
-	for(int16_t i = 1; i <= ALPHA; i++){
-		if(!isFarEnough(index + i)){
-			return FALSE;
-		}
-	}
-	return TRUE;
-}
 
-uint8_t carNewDir(){
-	PRINTF("carNewDir\r\n");
-	resetDistances();
-	weFace = 0;
-	int16_t dir = 0;
-	
-	while(!directionIsGood(dir) && dir < DISTANCES_SIZE){
-		dir += ALPHA * 2;
-	}
-	if(dir < DISTANCES_SIZE){
-		rotateTo(inRangeIndex(dir));
+	if(res == good){
+		rotateTo(inRangeIndex(desiredDirection));
+		resetDistances();
+		weFace = 0;
+		desiredDirection = 0;
 		return TRUE;
 	}
-	rotateTo(inRangeIndex(dir));//visszaforduljon az eredeti állapotba
-	return FALSE;
-}
-
-void corregateSpeed(uint32_t desiredRisingEdgeRate[], uint32_t currentRisingEdgeRate[], uint8_t *speeds[]){
-	if(desiredRisingEdgeRate[0] < currentRisingEdgeRate[0]){//these are times between the pings, less means faster speed
-		*(speeds[0]) += 1;
-	}else if(desiredRisingEdgeRate[0] > currentRisingEdgeRate[0]){
-		*(speeds[0]) -= 1;
-	}
-	
-	if(desiredRisingEdgeRate[1] < currentRisingEdgeRate[1]){
-		*(speeds[1]) += 1;
-	}else if(desiredRisingEdgeRate[1] > currentRisingEdgeRate[1]){
-		*(speeds[1]) -= 1;
-	}
-}
-
-extern volatile uint32_t rightTimeSinceLast;
-extern volatile uint32_t leftTimeSinceLast;
-
-extern volatile uint32_t u32_pwmCounter;//csak bizonyos időnként állítjuk a pwm-et
-
-void go(){
-	PRINTF("go\r\n");
-	const uint32_t GO_DURATION = 500u; // 0.7sec
-	uint8_t goRightSpeed = 65u;
-	uint8_t goLeftSpeed = 65u;
-	uint32_t start = g_systickCounter;
-	uint32_t end = start + GO_DURATION;
-	uint32_t desiredRisingEdgeRate[] = {9000, 9000};//left, right
-	while(g_systickCounter < end ||
-		(start > end && // tulfolyt
-		g_systickCounter > start)//de a g_systickCounter meg nem folyt tul
-		){
-		uint32_t currentRisingEdgeRate[] = {leftTimeSinceLast, rightTimeSinceLast};
-		uint8_t *speeds[] = {&goLeftSpeed, &goRightSpeed};
-		if(u32_pwmCounter == 0U){
-			u32_pwmCounter = PWM_CHANGE_TIME;
-			corregateSpeed(desiredRisingEdgeRate, currentRisingEdgeRate, speeds);
-			set_wheels(goLeftSpeed, goRightSpeed);//TODO, lehessen majd korrigalni
-		}
-		__asm("NOP");//busy wait //TODO is it stopped
-	}
-	
-	stop();
 }

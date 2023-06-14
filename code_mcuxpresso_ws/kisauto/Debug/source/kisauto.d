@@ -1,5 +1,4 @@
-source/LPC845_Project_UH_tavmero.o source/LPC845_Project_UH_tavmero.d: \
- ../source/LPC845_Project_UH_tavmero.c \
+source/kisauto.o source/kisauto.d: ../source/kisauto.c \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/board.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_common.h \
@@ -25,7 +24,8 @@ source/LPC845_Project_UH_tavmero.o source/LPC845_Project_UH_tavmero.d: \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h \
  ../source/sys.h ../source/SysTimer.h ../source/Dist/UH_HCSR-04.h \
- ../source/Dist/Measure.h ../source/letsdothis.h
+ ../source/Dist/Measure.h ../source/letsdothis.h ../source/fixSpeed.h \
+ ../source/timeBetween.h
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/board.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_common.h:
@@ -55,3 +55,5 @@ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_de
 ../source/Dist/UH_HCSR-04.h:
 ../source/Dist/Measure.h:
 ../source/letsdothis.h:
+../source/fixSpeed.h:
+../source/timeBetween.h:
