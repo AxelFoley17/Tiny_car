@@ -47,24 +47,20 @@ void ctimer0_callback(uint32_t flags)
    	    cnt = 0;
 	}
 }
-
-uint8_t bumm1 = FALSE;
-uint8_t bumm2 = FALSE;
-
-volatile uint32_t u32_RWSpeed = 0u;
-volatile uint32_t u32_LWSpeed = 0u;
-volatile uint32_t u32_lastR = 0u;
-volatile uint32_t u32_lastL = 0u;
+#if 0
+volatile uint32_t u32_RWSpeed = 0u;//bal kerék sebessége
+volatile uint32_t u32_LWSpeed = 0u;//jobb kerék sebessége
+volatile uint32_t u32_lastR = 0u;//utolsó jobb kerék impulzus
+volatile uint32_t u32_lastL = 0u;//utolsó bal kerék impulzus
 
 const float wheelPerimeter = 1.065f; //cm, not very exact
 const uint32_t wholes = 20u;
 const uint32_t freq = 30u * 1000000u;
 const uint32_t cmToM = 100u;
 
-//const float combinedNum = (float)freq * wheelPerimeter / (float)wholes / (float)cmToM;
-const float combinedNum = (float)freq * wheelPerimeter / (float)wholes;
+const float combinedNum = (float)freq * wheelPerimeter / (float)wholes;//sebesség számolás a megkapott értékből
 
-
+//jobb és bal oldal sebességének a kiszámolása
 void rightWheel_cb(uint32_t flags){
 	uint32_t u32_captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
 	uint32_t diff = u32_captValue - u32_lastR;
@@ -77,7 +73,96 @@ void leftWheel_cb(uint32_t flags){
 	u32_lastL = u32_captValue;
 	u32_LWSpeed = (volatile uint32_t)(combinedNum / (float) diff);
 }
+#endif
 
+#if 1
+volatile uint32_t lastRightCapture = 0u;
+volatile uint32_t lastLeftCapture = 0u;
+
+volatile uint32_t rightTimeSinceLast = 0u;
+volatile uint32_t leftTimeSinceLast = 0u;
+
+#define BUFFERMAXSIZE 10u
+volatile uint32_t rightBuffer[BUFFERMAXSIZE] = {0u};
+volatile uint32_t leftBuffer[BUFFERMAXSIZE] = {0u};
+uint8_t rightBufferCurrSize = 0u; 
+uint8_t leftBufferCurrSize = 0u;
+uint8_t rightBufferIndex = 0u;
+uint8_t leftBufferIndex = 0u;
+
+extern volatile uint8_t isGoing;
+
+uint32_t rightAverage(){
+	uint32_t sum = 0u;
+	if(rightBufferCurrSize == 0u)
+		return 0u;
+	for(uint8_t i = 0u; i < rightBufferCurrSize; i++){
+		sum += rightBuffer[i];
+	}
+	return (uint32_t)((double)sum / (double)rightBufferCurrSize);
+}
+
+uint32_t leftAverage(){
+	uint32_t sum = 0u;
+	if(leftBufferCurrSize == 0u)
+		return 0u;
+	for(uint8_t i = 0u; i < leftBufferCurrSize; i++){
+		sum += leftBuffer[i];
+	}
+	return (uint32_t)((double)sum / (double)leftBufferCurrSize);
+}
+
+void rightWheel_cb(uint32_t flags){
+	if(isGoing == TRUE){
+		uint32_t captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
+		uint32_t temp = 0u;
+		if(captValue > lastRightCapture)
+			temp = captValue - lastRightCapture;
+		else
+			temp = captValue + ((uint32_t)0xffffffff - lastRightCapture);
+		if(rightBufferCurrSize < BUFFERMAXSIZE){
+			rightBuffer[rightBufferCurrSize] = temp;
+			rightBufferCurrSize++;
+			rightBufferIndex++;
+		}else {
+			rightBuffer[rightBufferIndex] = temp;
+			rightBufferIndex++;
+		}
+		
+		if(rightBufferIndex >= BUFFERMAXSIZE)
+			rightBufferIndex = 0u;
+		
+		lastRightCapture = captValue;
+	}
+	rightTimeSinceLast = rightAverage();
+}
+
+void leftWheel_cb(uint32_t flags){
+	if(isGoing == TRUE){
+		uint32_t captValue = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_2);
+		uint32_t temp = 0u;
+		if(captValue > lastLeftCapture)
+			temp = captValue - lastLeftCapture;
+		else
+			temp = captValue + ((uint32_t)0xffffffff - lastLeftCapture);
+		if(leftBufferCurrSize < BUFFERMAXSIZE){
+			leftBuffer[leftBufferCurrSize] = temp;
+			leftBufferCurrSize++;
+			leftBufferIndex++;
+		}else {
+			leftBuffer[leftBufferIndex] = temp;
+			leftBufferIndex++;
+		}
+		
+		if(leftBufferIndex >= BUFFERMAXSIZE)
+			leftBufferIndex = 0u;
+			
+		lastLeftCapture = captValue;
+	}
+	leftTimeSinceLast = leftAverage();
+}
+
+#endif
 
 #define TRG_Time 1
 #define EchoTimeout 20 // > 1000*4/330m/s

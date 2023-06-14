@@ -1,5 +1,18 @@
 {
 	"files.associations": {
-		"type_traits": "c"
+		"type_traits": "c",
+		"board.h": "c",
+		"peripherals.h": "c",
+		"lpc845.h": "c",
+		"sys.h": "c",
+		"systimer.h": "c",
+		"uh_hcsr-04.h": "c",
+		"measure.h": "c",
+		"fsl_sctimer.h": "c",
+		"clock_config.h": "c",
+		"cmath": "c",
+		"fsl_debug_console.h": "c",
+		"compare": "c",
+		"letsdothis.h": "c"
 	}
 }

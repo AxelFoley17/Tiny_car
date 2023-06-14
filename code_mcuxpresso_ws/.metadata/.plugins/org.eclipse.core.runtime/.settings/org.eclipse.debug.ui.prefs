@@ -1,3 +1,4 @@
+Variables.detail.orientation=Variables.detail.orientation.hidden
 eclipse.preferences.version=1
 org.eclipse.debug.ui.MemoryHistoryKnownColor=235,235,235
 org.eclipse.debug.ui.MemoryHistoryUnknownColor=170,175,185
@@ -12,5 +13,6 @@ org.eclipse.debug.ui.outColor=235,235,235
 org.eclipse.debug.ui.save_dirty_editors_before_launch=always
 overriddenByCSS=,org.eclipse.debug.ui.MemoryHistoryKnownColor,org.eclipse.debug.ui.MemoryHistoryUnknownColor,org.eclipse.debug.ui.PREF_CHANGED_VALUE_BACKGROUND,org.eclipse.debug.ui.changedDebugElement,org.eclipse.debug.ui.consoleBackground,org.eclipse.debug.ui.errorColor,org.eclipse.debug.ui.inColor,org.eclipse.debug.ui.outColor,
 pref_state_memento.=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<FaultsViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="250" org.eclipse.debug.ui.SASH_REGISTERS_PART\="375" org.eclipse.debug.ui.SASH_STACKED_PART\="375"/>
+pref_state_memento.com.nxp.mcuxpresso.core.debug.ui.views.NXPHeapAndStackUsageView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684"/>
 pref_state_memento.org.eclipse.debug.ui.DebugVieworg.eclipse.debug.ui.DebugView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<DebugViewMemento org.eclipse.debug.ui.BREADCRUMB_DROPDOWN_AUTO_EXPAND\="false"/>
 preferredTargets=org.eclipse.cdt.debug.ui.toggleCBreakpointTarget,org.eclipse.cdt.debug.ui.toggleCDynamicPrintfTarget\:org.eclipse.cdt.debug.ui.toggleCBreakpointTarget|

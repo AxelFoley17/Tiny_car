@@ -13,4 +13,7 @@
 			<item value="pulse_count"/>
 		</list>
 	</section>
+	<section name="CResourceRenameRefactoringInputPage">
+		<item key="updateReferences" value="true"/>
+	</section>
 </section>

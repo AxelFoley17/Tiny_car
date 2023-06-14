@@ -20,6 +20,7 @@ device \
 drivers \
 source/Dist \
 source \
+source/Speed_Direction \
 startup \
 utilities \
 

@@ -1,0 +1,5 @@
+code_mcuxpresso_ws/.mcuxpressoide_packages_support/
+code_mcuxpresso_ws/.metadata/
+code_mcuxpresso_ws/AzureRTOS_TAD_logs/
+code_mcuxpresso_ws/FreeRTOS_TAD_logs/
+code_mcuxpresso_ws/ZephyrRTOS_TAD_logs/
