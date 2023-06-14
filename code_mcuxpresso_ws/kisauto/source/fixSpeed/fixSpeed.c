@@ -1,5 +1,5 @@
+#include <scanning.h>
 #include "fixSpeed.h"
-#include "letsdothis.h"
 
 uint32_t desiredEdgeDelayLeft = 0;
 uint32_t desiredEdgeDelayRight = 0;
@@ -10,6 +10,7 @@ extern volatile uint32_t rightTimeSinceLast;
 int8_t leftSpeed = 70;
 int8_t rightSpeed = 70;
 
+//tries to maintain the set edge delay
 void regulateSpeed(){
 	if(desiredEdgeDelayLeft < leftTimeSinceLast){//these are times between the pings, less means faster speed
 		leftSpeed += 1;
@@ -25,6 +26,7 @@ void regulateSpeed(){
 	set_wheels(leftSpeed, rightSpeed);
 }
 
+//sets the desired edge delay
 void setDesiredEdgeDelay(uint32_t left, uint32_t right){
 	desiredEdgeDelayLeft = left;
 	desiredEdgeDelayRight = right;

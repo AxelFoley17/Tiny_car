@@ -4,34 +4,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/SysTimer.c \
-../source/fixSpeed.c \
 ../source/kisauto.c \
-../source/letsdothis.c \
 ../source/mtb.c \
+../source/scanning.c \
 ../source/semihost_hardfault.c \
-../source/sys.c \
-../source/timeBetween.c 
+../source/speedWatching.c 
 
 C_DEPS += \
-./source/SysTimer.d \
-./source/fixSpeed.d \
 ./source/kisauto.d \
-./source/letsdothis.d \
 ./source/mtb.d \
+./source/scanning.d \
 ./source/semihost_hardfault.d \
-./source/sys.d \
-./source/timeBetween.d 
+./source/speedWatching.d 
 
 OBJS += \
-./source/SysTimer.o \
-./source/fixSpeed.o \
 ./source/kisauto.o \
-./source/letsdothis.o \
 ./source/mtb.o \
+./source/scanning.o \
 ./source/semihost_hardfault.o \
-./source/sys.o \
-./source/timeBetween.o 
+./source/speedWatching.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -46,7 +37,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/SysTimer.d ./source/SysTimer.o ./source/fixSpeed.d ./source/fixSpeed.o ./source/kisauto.d ./source/kisauto.o ./source/letsdothis.d ./source/letsdothis.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/sys.d ./source/sys.o ./source/timeBetween.d ./source/timeBetween.o
+	-$(RM) ./source/kisauto.d ./source/kisauto.o ./source/mtb.d ./source/mtb.o ./source/scanning.d ./source/scanning.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/speedWatching.d ./source/speedWatching.o
 
 .PHONY: clean-source
 

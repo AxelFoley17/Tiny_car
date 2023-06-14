@@ -10,7 +10,9 @@ RM := rm -rf
 -include sources.mk
 -include utilities/subdir.mk
 -include startup/subdir.mk
--include source/Speed_Direction/subdir.mk
+-include source/timeBetween/subdir.mk
+-include source/sys/subdir.mk
+-include source/fixSpeed/subdir.mk
 -include source/Dist/subdir.mk
 -include source/subdir.mk
 -include drivers/subdir.mk

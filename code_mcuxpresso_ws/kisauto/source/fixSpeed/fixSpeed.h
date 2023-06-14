@@ -3,7 +3,7 @@
 
 #include "stdint.h"
 
-void regulateSpeed();//regulates speed
+void regulateSpeed();//tries to maintain the set edge delay
 void setDesiredEdgeDelay(uint32_t left, uint32_t right);//sets the desired edge delay
 
 #endif //FIXSPEED_H

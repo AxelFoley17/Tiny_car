@@ -1,4 +1,4 @@
-source/kisauto.o source/kisauto.d: ../source/kisauto.c \
+source/scanning.o source/scanning.d: ../source/scanning.c \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source/scanning.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/board.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h \
@@ -20,12 +20,10 @@ source/kisauto.o source/kisauto.d: ../source/kisauto.c \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h \
- F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/pin_mux.h \
- F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h \
+ ../source/sys/Sys.h ../source/sys/SysTimer.h ../source/Dist/UH_HCSR-04.h \
  F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h \
- ../source/sys/sys.h ../source/sys/SysTimer.h ../source/Dist/UH_HCSR-04.h \
- ../source/fixSpeed/fixSpeed.h ../source/timeBetween/timeBetween.h
+ ../source/timeBetween/timeBetween.h
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\source/scanning.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/board.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h:
@@ -47,12 +45,9 @@ F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/peripheral
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_clock.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_sctimer.h:
-F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/pin_mux.h:
-F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\board/clock_config.h:
 F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\device/LPC845.h:
-F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h:
-../source/sys/sys.h:
+../source/sys/Sys.h:
 ../source/sys/SysTimer.h:
 ../source/Dist/UH_HCSR-04.h:
-../source/fixSpeed/fixSpeed.h:
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\utilities/fsl_debug_console.h:
 ../source/timeBetween/timeBetween.h:

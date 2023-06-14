@@ -1,0 +1,5 @@
+F:\1study\6f\Mikro\_project\Tiny_car\code_mcuxpresso_ws\kisauto\drivers/fsl_ctimer.h:550:24:CTIMER_GetCaptureValue	16	static
+../source/speedWatching.c:20:10:rightAverage	24	static
+../source/speedWatching.c:31:10:leftAverage	24	static
+../source/speedWatching.c:43:6:rightWheel_cb	24	static
+../source/speedWatching.c:68:6:leftWheel_cb	24	static

@@ -1,12 +1,12 @@
+#include <scanning.h>
 #include "board.h"
 #include "peripherals.h"
 #include "LPC845.h"
-#include "Sys.h"
-#include "SysTimer.h"
+#include "sys/Sys.h"
+#include "sys/SysTimer.h"
 #include "Dist/UH_HCSR-04.h"
 #include "fsl_debug_console.h"
-#include "letsdothis.h"
-#include "timeBetween.h"
+#include "timeBetween/timeBetween.h"
 
 const uint16_t MIN_DISTANCE = 40u; //cm
 const uint16_t MAX_DISTANCE = 400u; //cm
@@ -16,14 +16,14 @@ const uint16_t MAX_DISTANCE = 400u; //cm
 
 
 //types
-typedef enum DistState{
-	good = 0,
+typedef enum DistState{//state of the distance
+	good = 0,//is far enough
 	bad = 1,
-	unknown = 2,
-	beingMeasured = 3
+	unknown = 2,//we dont know exactly yet
+	beingMeasured = 3//currently being scanned
 }DistState;
 
-typedef struct Dist{
+typedef struct Dist{//distance
 	uint8_t distance;
 	uint8_t measuredTimes;
 	DistState distState;
@@ -31,7 +31,7 @@ typedef struct Dist{
 
 
 //variables
-Dist distances[DISTANCES_SIZE];
+Dist distances[DISTANCES_SIZE]; //360 degrees divided into 30 directions
 
 int16_t weFace = 0;
 
@@ -41,6 +41,7 @@ const int16_t ALPHA = 5;
 
 
 //functions
+//resets all distances
 void resetDistances(){
 	for(int16_t i = 0; i < DISTANCES_SIZE; i++){
 		distances[i].distance = 0;
@@ -49,6 +50,7 @@ void resetDistances(){
 	}
 }
 
+//the indexes work like a circle, to the right of the highest one is the lowest one
 int16_t inRangeIndex(int16_t index){
 	while(index >= DISTANCES_SIZE){
 		index -= DISTANCES_SIZE;
@@ -58,7 +60,9 @@ int16_t inRangeIndex(int16_t index){
 	}
 	return index;
 }
-extern volatile uint32_t g_systickCounter;
+extern volatile uint32_t g_systickCounter;//counter
+
+//stops the car by breaking
 void stop(){
 	SCTIMER_UpdatePwmDutycycle(SCT0, 0, (uint8_t) 100, SCT0_pwmEvent[0]);
 	SCTIMER_UpdatePwmDutycycle(SCT0, 1, (uint8_t) 100, SCT0_pwmEvent[1]);
@@ -74,6 +78,7 @@ void stop(){
 	}
 }
 
+//set the wheels to the desired speed and direction
 void set_wheels(int8_t leftPercent, int8_t rightPercent){
 	if(leftPercent <= -100) leftPercent = -95;
 	else if(leftPercent >= 100) leftPercent = 95;
@@ -105,6 +110,8 @@ void set_wheels(int8_t leftPercent, int8_t rightPercent){
 	}
 }
 
+//the 360 field is divided into 30 parts
+//this function makes the car turn one part to the left or right
 void rotateOne(uint8_t direction){//false = left, true = right
 	const uint32_t ROT_DURATION = 52u;
 	const int8_t ROTSPEED = 90u;
@@ -120,7 +127,7 @@ void rotateOne(uint8_t direction){//false = left, true = right
 	stop();
 }
 
-
+//this function makes the car turn to the desired index
 void rotateTo(int16_t index){//itt mar nem kell inrange be lennie, konyebb szamolas miatt ki is szedjuk onnan
 	index = inRangeIndex(index);
 	weFace = inRangeIndex(weFace);
@@ -140,6 +147,7 @@ void rotateTo(int16_t index){//itt mar nem kell inrange be lennie, konyebb szamo
 	return;
 }
 
+//we scan in the direction of the index
 void scan(int16_t index){
 	const uint16_t measureTimes = 5;
 	index = inRangeIndex(index);
@@ -161,6 +169,7 @@ void scan(int16_t index){
 	}
 }
 
+//tells if the direction is far enough, isnt, or is being scanned
 DistState isFarEnough(int16_t index){
 	index = inRangeIndex(index);
 	if(distances[index].distState == bad){//just to be safe
@@ -184,6 +193,8 @@ DistState isFarEnough(int16_t index){
 	return unknown;//we arent done measuring so its unknown
 }
 
+//tells if the area is good, bad, or unknown
+//if its good, we can go forward
 DistState directionIsGood(int16_t index){
 	index = inRangeIndex(index);
 	for(int16_t i = 1; i <= ALPHA; i++){
@@ -210,8 +221,11 @@ DistState directionIsGood(int16_t index){
 	return good;//all the directions were good -> we are good to go
 }
 
+//tells if we can go forward or not
+//if we can it also sets the car to the desired direction
 uint8_t canGo(){
 	if(desiredDirection >= DISTANCES_SIZE){//we have done a full rotation
+		rotateTo(inRangeIndex(desiredDirection));//we need to rotate back to the starting position 
 		desiredDirection = 0;
 		resetDistances();
 	}
